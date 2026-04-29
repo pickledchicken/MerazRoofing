@@ -73,13 +73,13 @@ nav ul li a {
 }
 
 .service img {
-  width: 100px;
+  width: 50%;
   height: auto;
   border-radius: 8px;
 }
 
 #about img {
-  width: 100px;
+  width: 50%;
   margin: 20px 0;
   border-radius: 8px;
 }
