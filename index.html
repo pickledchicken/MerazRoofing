@@ -98,41 +98,81 @@ We understand that a roof is more than just a covering; it’s a crucial compone
     <legend class="fs-fieldset-title">Personal details</legend>
     <div class="fs-field">
       <label class="fs-label" for="name">Full Name</label>
-      <input class="fs-input" id="name" name="name" required />
+      <input
+        class="fs-input"
+        type="text"
+        id="name"
+        name="name"
+        autocomplete="name"
+        required
+      />
     </div>
   </fieldset>
   <fieldset>
     <legend class="fs-fieldset-title">Address details</legend>
     <div class="fs-field">
       <label class="fs-label" for="address-1">Address line 1</label>
-      <input class="fs-input" id="address-1" name="address-1" />
+      <input
+        class="fs-input"
+        type="text"
+        id="address-1"
+        name="address-1"
+        autocomplete="address-line1"
+      />
     </div>
     <div class="fs-field">
       <label class="fs-label" for="city">City</label>
-      <input class="fs-input" id="city" name="city" />
+      <input
+        class="fs-input"
+        type="text"
+        id="city"
+        name="city"
+        autocomplete="address-level2"
+      />
     </div>
     <div class="fs-field">
       <label class="fs-label" for="state">State / Province</label>
-      <input class="fs-input" id="state" name="state" />
+      <input
+        class="fs-input"
+        type="text"
+        id="state"
+        name="state"
+        autocomplete="address-level1"
+      />
     </div>
     <div class="fs-field">
       <label class="fs-label" for="zip-code">Postal / Zip Code</label>
-      <input class="fs-input" id="zip-code" name="zip-code" />
+      <input
+        class="fs-input"
+        type="text"
+        id="zip-code"
+        name="zip-code"
+        autocomplete="postal-code"
+      />
     </div>
   </fieldset>
   <fieldset>
     <legend class="fs-fieldset-title">Contact information</legend>
     <div class="fs-field">
       <label class="fs-label" for="email">Email</label>
-      <input class="fs-input" id="email" name="email" required />
+      <input
+        class="fs-input"
+        type="email"
+        id="email"
+        name="email"
+        autocomplete="email"
+        required
+      />
     </div>
     <div class="fs-field">
       <label class="fs-label" for="number">Contact Number</label>
       <input
         class="fs-input"
+        type="tel"
         id="number"
         name="number"
         placeholder="(000) 000-0000"
+        autocomplete="tel"
         required
       />
     </div>
@@ -168,11 +208,12 @@ We understand that a roof is more than just a covering; it’s a crucial compone
       <label class="fs-label" for="start-date">When do you plan to start?</label>
       <input
         class="fs-input"
+        type="date"
         id="start-date"
         name="start-date"
-        placeholder="DD-MMM-YYYY"
         required
       />
+        placeholder="DD-MMM-YYYY"
     </div>
     <div class="fs-field">
       <label class="fs-label" for="learn">How did you learn about us?</label>
