@@ -13,6 +13,8 @@ body {
   font-family: var(--font-family-body);
   font-optical-sizing: auto;
   font-style: normal;
+  background-color: var(--color-background);
+  color: var(--color-text-default);
 }
 
 .container {
@@ -236,11 +238,6 @@ textarea {
 }
 
 /** Components **/
-
-body {
-  background-color: var(--color-background);
-  color: var(--color-text-default);
-}
 
 .fs-form {
   display: grid;
