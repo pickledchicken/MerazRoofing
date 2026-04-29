@@ -77,6 +77,19 @@ nav ul li a {
   border-radius: 5px;
 }
 
+.btn,
+.fs-button,
+form button {
+  transition: background-color 0.2s ease,
+              transform 0.2s ease;
+}
+
+.btn:hover,
+.fs-button:hover,
+form button:hover {
+  transform: translateY(-2px);
+}
+
 /* ===== SERVICES GRID (UPDATED) ===== */
 .services {
   display: grid;
