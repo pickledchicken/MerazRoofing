@@ -38,12 +38,13 @@ header .container {
 }
 
 nav ul {
-  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
 }
 
 nav ul li {
-  display: inline;
-  margin-left: 20px;
+  list-style: none;
 }
 
 nav ul li a {
