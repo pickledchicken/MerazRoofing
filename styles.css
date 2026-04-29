@@ -104,9 +104,9 @@ nav ul li a {
 
 /* ABOUT */
 #about img {
-  width: 20%;
-  margin: 20px 0;
-  border-radius: 8px;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
 }
 
 /* FORM */
