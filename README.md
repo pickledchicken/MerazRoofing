@@ -30,7 +30,7 @@ Opt for our Advanced Complete Roof Replacement service, where we utilize the lat
 
 ### Homepage Hero
 
-<img src="images/hero.jpg" alt="Hero Image" width="100%" style="border-radius:10px;"/>
+<img src="images/hero.jpeg" alt="Hero Image" width="100%" style="border-radius:10px;"/>
 
 ### Services
 
