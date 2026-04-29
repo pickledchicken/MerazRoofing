@@ -330,8 +330,7 @@ fieldset {
 }
 
 .fs-input,
-.fs-select,
-.fs-textarea {
+.fs-select {
   width: 100%;
   appearance: none;
   border-radius: 9999px;
@@ -344,6 +343,9 @@ fieldset {
   outline: none;
   padding-left: 1rem;
   padding-right: 1rem;
+}
+.fs-textarea {
+  border-radius: 0.75rem;
 }
 
 .fs-input:focus-visible,
