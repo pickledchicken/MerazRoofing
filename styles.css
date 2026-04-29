@@ -307,6 +307,7 @@ fieldset {
 }
 
 .fs-button {
+  min-width: 0;
   background-color: var(--color-primary);
   border-radius: 9999px;
   color: white;
