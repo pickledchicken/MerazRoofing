@@ -35,6 +35,7 @@ Opt for our Advanced Complete Roof Replacement service, where we utilize the lat
 ### Services
 
 <p float="left">
+  <source srcset="images/basic-repair.webp" type="image/webp">
   <img src="images/basic-repair.jpeg" width="32%" style="border-radius:10px;"/>
   <img src="images/intermediate-solutions.jpeg" width="32%" style="border-radius:10px;"/>
   <img src="images/roof-replacement.jpeg" width="32%" style="border-radius:10px;"/>
