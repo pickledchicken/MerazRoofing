@@ -230,6 +230,11 @@ textarea {
 
 /** Components **/
 
+body {
+  background-color: var(--color-background);
+  color: var(--color-text-default);
+}
+
 .fs-form {
   display: grid;
   row-gap: 1rem;
