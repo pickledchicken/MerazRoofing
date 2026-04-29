@@ -96,10 +96,6 @@ We understand that a roof is more than just a covering; it’s a crucial compone
       <input class="fs-input" id="address-1" name="address-1" />
     </div>
     <div class="fs-field">
-      <label class="fs-label" for="address-2">Address line 2</label>
-      <input class="fs-input" id="address-2" name="address-2" />
-    </div>
-    <div class="fs-field">
       <label class="fs-label" for="city">City</label>
       <input class="fs-input" id="city" name="city" />
     </div>
@@ -130,13 +126,15 @@ We understand that a roof is more than just a covering; it’s a crucial compone
     </div>
   </fieldset>
   <fieldset>
-    <legend class="fs-fieldset-title">Message</legend>
+    <legend class="fs-fieldset-title">Description</legend>
     <div class="fs-field">
       <label class="fs-label" for=“Message”>Message</label>
       <textarea
         class="fs-textarea"
-        id=“Message”
-        name=“Message”
+        id=“message”
+        name=“message”
+        placeholder=“Please describe your situation“
+        required
       ></textarea>
       <p class="fs-description">
         Please describe your requirements
@@ -146,8 +144,8 @@ We understand that a roof is more than just a covering; it’s a crucial compone
   <fieldset>
     <legend class="fs-fieldset-title">Services</legend>
     <div class="fs-field">
-      <label class="fs-label" for="dates">Services Requested</label>
-      <select class="fs-select" id="dates" name="dates">
+      <label class="fs-label" for=“services”>Services Requested</label>
+      <select class="fs-select" id=“services” name=“services”>
         <option value=“roof-repair”>Roof Repair</option>
         <option value=“roof-replacement>Roof Replacement</option>
         <option value=“gutter-installation”>Gutter Installation</option>
