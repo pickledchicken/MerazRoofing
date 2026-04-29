@@ -9,6 +9,11 @@
 
 body {
   line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--font-family-body);
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
 .container {
@@ -158,10 +163,6 @@ img {
   display: block;
 }
 
-body {
-  overflow-x: hidden;
-}
-
 /** Variables **/
 
 :root {
@@ -180,13 +181,6 @@ body {
 }
 
 /** Base **/
-
-body {
-  -webkit-font-smoothing: antialiased;
-  font-family: var(--font-family-body);
-  font-optical-sizing: auto;
-  font-style: normal;
-}
 
 button,
 input,
