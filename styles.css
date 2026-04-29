@@ -180,6 +180,12 @@ footer {
   }
 }
 
+@media (max-width: 768px) {
+  .hero-content h2 {
+    font-size: 2rem;
+  }
+}
+
 a:focus-visible,
 button:focus-visible {
   outline: 3px solid var(--color-highlight);
