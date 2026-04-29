@@ -24,10 +24,6 @@ header {
   padding: 15px 0;
 }
 
-header h1 {
-  display: inline;
-}
-
 header .container {
   display: flex;
   justify-content: space-between;
