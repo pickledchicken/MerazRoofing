@@ -35,14 +35,14 @@ Opt for our Advanced Complete Roof Replacement service, where we utilize the lat
 ### Services
 
 <p float="left">
-  <img src="images/basic-repair.jpg" width="32%" style="border-radius:10px;"/>
-  <img src="images/intermediate-solutions.jpg" width="32%" style="border-radius:10px;"/>
-  <img src="images/roof-replacement.jpg" width="32%" style="border-radius:10px;"/>
+  <img src="images/basic-repair.jpeg" width="32%" style="border-radius:10px;"/>
+  <img src="images/intermediate-solutions.jpeg" width="32%" style="border-radius:10px;"/>
+  <img src="images/roof-replacement.jpeg" width="32%" style="border-radius:10px;"/>
 </p>
 
 ### About Section
 
-<img src="images/about.jpg" alt="About Image" width="100%" style="border-radius:10px;"/>
+<img src="images/about.jpeg" alt="About Image" width="100%" style="border-radius:10px;"/>
 
 ---
 
@@ -53,11 +53,11 @@ meraz-roofing/
 │── index.html
 │── styles.css
 │── images/
-│   ├── hero.jpg
-│   ├── basic-repair.jpg
-│   ├── intermediate-solutions.jpg
-│   ├── roof-replacement.jpg
-│   └── about.jpg
+│   ├── hero.jpeg
+│   ├── basic-repair.jpeg
+│   ├── intermediate-solutions.jpeg
+│   ├── roof-replacement.jpeg
+│   └── about.jpeg
 ```
 
 ---
