@@ -107,26 +107,6 @@ nav ul li a {
 }
 
 /* FORM */
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-form input,
-form textarea {
-  margin-bottom: 10px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-form button {
-  padding: 10px;
-  background: #222;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-}
 
 /* FOOTER */
 footer {
