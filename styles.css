@@ -26,8 +26,11 @@ header h1 {
   display: inline;
 }
 
-nav {
-  float: right;
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 nav ul {
