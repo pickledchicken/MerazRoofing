@@ -528,3 +528,20 @@ fieldset {
   text-align: center;
   white-space: nowrap;
 }
+
+/* ===== MOBILE FORM FIX ===== */
+@media (max-width: 768px) {
+  .fs-form:where(.fs-layout__2-column),
+  .fs-form:where(.fs-layout__2-column) fieldset {
+    grid-template-columns: 1fr;
+  }
+
+  .fs-button-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .fs-button {
+    width: 100%;
+  }
+}
