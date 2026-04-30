@@ -76,7 +76,7 @@ nav ul li a:hover {
   display: inline-block;
   margin-top: 15px;
   padding: 10px 20px;
-  background: #e63946;
+  background: #DE5302;
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
@@ -209,12 +209,12 @@ img {
 
 :root {
   --color-background: #e7e7e7;
-  --color-background-alt: #ba5ed7;
-  --color-border-active: #a94bc3;
+  --color-background-alt: #DC5A0E;
+  --color-border-active: #CE4300;
   --color-border-default: #d1d1d1;
-  --color-highlight: #e2b6f1;
-  --color-primary: #86319a;
-  --color-primary-active: #5e2768;
+  --color-highlight: #F08533;
+  --color-primary: #D04701;
+  --color-primary-active: #B43500;
   --color-text-default: #262626;
   --color-text-muted: #4f4f4f;
 
