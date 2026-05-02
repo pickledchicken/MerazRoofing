@@ -298,6 +298,24 @@
 <a href="tel:+19103808027" class="btn">
   Call or Text Now
 </a>
+
+    <div class="contact-actions">
+  <button class="contact-button" onclick="toggleContactOptions()">
+    Call or Text Us
+  </button>
+
+  <div id="contactOptions" class="contact-options">
+    <a href="tel:+13055551234">Call +1 (305) 555-1234</a>
+    <a href="sms:+13055551234">Text +1 (305) 555-1234</a>
+  </div>
+</div>
+
+<script>
+  function toggleContactOptions() {
+    const options = document.getElementById("contactOptions");
+    options.classList.toggle("show");
+  }
+</script>
     
   </main>
   
