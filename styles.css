@@ -593,6 +593,16 @@ fieldset {
   margin-bottom: 1.5rem;
 }
 
+.contact-cta h3 {
+  font-size: 2rem;
+  color: var(--color-text-default);
+}
+
+.contact-cta p {
+  color: var(--color-text-muted);
+  font-size: 1.1rem;
+}
+
 /* CONTACT OPTIONS DROPDOWN */
 .contact-options {
   display: none;
@@ -609,6 +619,7 @@ fieldset {
 /* MATCH EXISTING BUTTON STYLE */
 .contact-options .btn {
   min-width: 220px;
+  text-align: center;
 }
 
 /* ===== MOBILE FORM FIX ===== */
