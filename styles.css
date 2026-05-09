@@ -43,7 +43,7 @@ h3 {
 }
 
 h1 {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
 }
 
 h2 {
@@ -76,23 +76,27 @@ a {
 header {
   background-color: #111;
   color: white;
-  padding: 1rem 0;
+
   position: sticky;
   top: 0;
   z-index: 1000;
+
+  width: 100%;
 }
 
 header .container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 0 5%;
+  align-items: center;
+
+  padding: 1rem 5%;
 }
 
 header h1 {
   color: white;
-  font-size: 1.3rem;
-  max-width: 500px;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  max-width: 450px;
 }
 
 /* =========================
@@ -101,13 +105,22 @@ header h1 {
 
 nav ul {
   display: flex;
-  gap: 2rem;
+  align-items: center;
+
+  gap: 1.25rem;
+
+  list-style: none;
+}
+
+nav ul li {
   list-style: none;
 }
 
 nav a {
   color: white;
+  font-size: 0.95rem;
   font-weight: 500;
+
   transition: color 0.3s ease;
 }
 
@@ -166,6 +179,7 @@ nav a:hover {
   border: none;
   font-weight: 600;
   cursor: pointer;
+
   transition:
     background-color 0.3s ease,
     transform 0.2s ease;
@@ -182,16 +196,21 @@ nav a:hover {
 
 .services {
   display: grid;
+
   grid-template-columns:
     repeat(auto-fit, minmax(280px, 1fr));
+
   gap: 2rem;
   margin-top: 2rem;
 }
 
 .service {
   background: white;
+
   border-radius: 12px;
+
   overflow: hidden;
+
   box-shadow:
     0 4px 12px rgba(0, 0, 0, 0.08);
 
@@ -224,6 +243,7 @@ nav a:hover {
 
 .service-btn {
   display: inline-block;
+
   margin: 0 1.25rem 1.5rem;
 
   padding: 12px 24px;
@@ -251,10 +271,16 @@ nav a:hover {
 
 #about img {
   width: 100%;
+  max-width: 420px;
+  height: auto;
+
+  display: block;
+
+  margin: 0 auto 2rem;
+
   border-radius: 12px;
-  margin-bottom: 2rem;
-  max-height: 500px;
-  object-fit: cover;
+
+  object-fit: contain;
 }
 
 /* =========================
@@ -263,7 +289,9 @@ nav a:hover {
 
 form {
   background: white;
+
   padding: 2rem;
+
   border-radius: 12px;
 
   box-shadow:
@@ -295,10 +323,15 @@ legend {
 .fs-select,
 .fs-textarea {
   width: 100%;
+
   padding: 14px;
+
   border: 1px solid #ccc;
+
   border-radius: 6px;
+
   font-size: 1rem;
+
   font-family: inherit;
 }
 
@@ -320,6 +353,7 @@ legend {
 .fs-button {
   background-color: #b22222;
   color: white;
+
   border: none;
 
   padding: 14px 28px;
@@ -351,9 +385,13 @@ legend {
 
 .contact-options {
   display: none;
+
   margin-top: 1.5rem;
+
   gap: 1rem;
+
   justify-content: center;
+
   flex-wrap: wrap;
 }
 
@@ -368,7 +406,9 @@ legend {
 footer {
   background-color: #111;
   color: white;
+
   text-align: center;
+
   padding: 3rem 1rem;
 }
 
@@ -400,91 +440,12 @@ img {
 }
 
 /* =========================
-   MOBILE RESPONSIVE
+   SERVICE PAGE STYLES
 ========================= */
 
-@media (max-width: 900px) {
-
-  header .container {
-    flex-direction: column;
-    gap: 1rem;
-    text-align: center;
-    padding: 1rem;
-  }
-
-  nav ul {
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .hero-content h2 {
-    font-size: 2.3rem;
-  }
-
-  .hero-content p {
-    font-size: 1.05rem;
-  }
-}
-
-@media (max-width: 768px) {
-
-  .container {
-    width: 92%;
-  }
-
-  h2 {
-    font-size: 1.9rem;
-  }
-
-  .hero-content h2 {
-    font-size: 2rem;
-  }
-
-  .service img {
-    height: 200px;
-  }
-
-  form {
-    padding: 1.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-
-  h1 {
-    font-size: 1.2rem;
-  }
-
-  .hero-content h2 {
-    font-size: 1.7rem;
-  }
-
-  .btn,
-  .service-btn,
-  .fs-button {
-    width: 100%;
-    text-align: center;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-}
-/* =========================
-   SERVICE PAGE
-========================= */
-
-.service-page-hero {
-  background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.55),
-      rgba(0, 0, 0, 0.55)
-    ),
-    url("images/basic-repair.jpeg")
-    center/cover no-repeat;
-
+.service-page-hero,
+.intermediate-service-hero,
+.replacement-service-hero {
   min-height: 55vh;
 
   display: flex;
@@ -494,21 +455,57 @@ img {
   text-align: center;
 }
 
+.service-page-hero {
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.55)
+    ),
+    url("images/basic-repair.jpeg")
+    center/cover no-repeat;
+}
+
+.intermediate-service-hero {
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.55)
+    ),
+    url("images/intermediate-solutions.jpeg")
+    center/cover no-repeat;
+}
+
+.replacement-service-hero {
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.55)
+    ),
+    url("images/roof-replacement.jpeg")
+    center/cover no-repeat;
+}
+
 .hero-overlay {
   width: 100%;
   padding: 4rem 1rem;
 }
 
-.service-page-hero h2 {
+.service-page-hero h2,
+.intermediate-service-hero h2,
+.replacement-service-hero h2 {
   color: white;
   font-size: 3rem;
   margin-bottom: 1rem;
 }
 
-.service-page-hero p {
+.service-page-hero p,
+.intermediate-service-hero p,
+.replacement-service-hero p {
   color: white;
   font-size: 1.2rem;
+
   max-width: 750px;
+
   margin: 0 auto;
 }
 
@@ -518,8 +515,11 @@ img {
 
 .service-page-image {
   width: 100%;
+
   border-radius: 12px;
+
   margin-bottom: 2rem;
+
   box-shadow:
     0 6px 20px rgba(0, 0, 0, 0.12);
 }
@@ -544,6 +544,7 @@ img {
 
 .service-cta {
   margin-top: 3rem;
+
   padding: 2rem;
 
   background: white;
@@ -557,114 +558,95 @@ img {
 }
 
 /* =========================
-   MOBILE
+   TABLET RESPONSIVE
 ========================= */
 
 @media (max-width: 768px) {
 
-  .service-page-hero h2 {
-    font-size: 2.2rem;
+  header .container {
+    flex-direction: column;
+    align-items: center;
+
+    gap: 0.75rem;
+
+    padding: 1rem;
   }
 
-  .service-page-hero p {
+  header h1 {
+    text-align: center;
     font-size: 1rem;
-  }
-}
-/* =========================
-   INTERMEDIATE SERVICE PAGE
-========================= */
-
-.intermediate-service-hero {
-  background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.55),
-      rgba(0, 0, 0, 0.55)
-    ),
-    url("images/intermediate-solutions.jpeg")
-    center/cover no-repeat;
-
-  min-height: 55vh;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  text-align: center;
-}
-
-.intermediate-service-hero h2 {
-  color: white;
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.intermediate-service-hero p {
-  color: white;
-  font-size: 1.2rem;
-  max-width: 750px;
-  margin: 0 auto;
-}
-
-/* =========================
-   MOBILE RESPONSIVE
-========================= */
-
-@media (max-width: 768px) {
-
-  .intermediate-service-hero h2 {
-    font-size: 2.2rem;
+    max-width: 100%;
   }
 
-  .intermediate-service-hero p {
-    font-size: 1rem;
+  nav ul {
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 0.75rem;
   }
-}
-/* =========================
-   ROOF REPLACEMENT PAGE
-========================= */
 
-.replacement-service-hero {
-  background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.55),
-      rgba(0, 0, 0, 0.55)
-    ),
-    url("images/roof-replacement.jpeg")
-    center/cover no-repeat;
+  nav a {
+    font-size: 0.9rem;
+  }
 
-  min-height: 55vh;
+  .container {
+    width: 92%;
+  }
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  h2 {
+    font-size: 1.9rem;
+  }
 
-  text-align: center;
-}
-
-.replacement-service-hero h2 {
-  color: white;
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.replacement-service-hero p {
-  color: white;
-  font-size: 1.2rem;
-  max-width: 750px;
-  margin: 0 auto;
-}
-
-/* =========================
-   MOBILE RESPONSIVE
-========================= */
-
-@media (max-width: 768px) {
-
+  .hero-content h2,
+  .service-page-hero h2,
+  .intermediate-service-hero h2,
   .replacement-service-hero h2 {
     font-size: 2.2rem;
   }
 
+  .hero-content p,
+  .service-page-hero p,
+  .intermediate-service-hero p,
   .replacement-service-hero p {
     font-size: 1rem;
+  }
+
+  .service img {
+    height: 200px;
+  }
+
+  form {
+    padding: 1.5rem;
+  }
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 480px) {
+
+  header h1 {
+    font-size: 0.95rem;
+  }
+
+  nav ul {
+    gap: 0.5rem;
+  }
+
+  nav a {
+    font-size: 0.85rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .btn,
+  .service-btn,
+  .fs-button {
+    width: 100%;
+    text-align: center;
   }
 }
