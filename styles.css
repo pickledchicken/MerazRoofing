@@ -1,9 +1,10 @@
-```css
 /* =========================
    GLOBAL STYLES
 ========================= */
 
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -18,6 +19,17 @@ body {
   line-height: 1.6;
   color: #222;
   background-color: #f8f8f8;
+  overflow-x: hidden;
+}
+
+/* =========================
+   MEDIA
+========================= */
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
 }
 
 /* =========================
@@ -25,8 +37,7 @@ body {
 ========================= */
 
 .container {
-  width: 90%;
-  max-width: 1200px;
+  width: min(92%, 1200px);
   margin: 0 auto;
   padding: 4rem 0;
 }
@@ -41,14 +52,15 @@ h3 {
   font-family: "Figtree", sans-serif;
   font-weight: 700;
   color: #111;
+  line-height: 1.2;
 }
 
 h1 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 h2 {
-  font-size: 2.2rem;
+  font-size: clamp(2rem, 4vw, 2.6rem);
   margin-bottom: 2rem;
   text-align: center;
 }
@@ -59,6 +71,11 @@ h3 {
 
 p {
   margin-bottom: 1rem;
+  color: #444;
+}
+
+ul {
+  padding-left: 1.25rem;
 }
 
 /* =========================
@@ -76,6 +93,8 @@ a {
 
 header {
   background-color: rgba(17, 17, 17, 0.96);
+  backdrop-filter: blur(6px);
+
   color: white;
 
   position: fixed;
@@ -100,14 +119,20 @@ header .container {
   justify-content: space-between;
   align-items: center;
 
-  padding: 0.9rem 5%;
+  gap: 1rem;
+
+  padding: 0.9rem 1rem;
+}
+
+.logo-link {
+  flex-shrink: 0;
 }
 
 header h1 {
   color: white;
   font-size: 1rem;
-  line-height: 1.4;
-  max-width: 420px;
+  line-height: 1.3;
+  max-width: 350px;
 }
 
 /* =========================
@@ -117,25 +142,33 @@ header h1 {
 nav ul {
   display: flex;
   align-items: center;
+  justify-content: center;
 
-  gap: 1rem;
+  flex-wrap: wrap;
+
+  gap: 0.8rem;
 
   list-style: none;
+  padding-left: 0;
 }
 
 nav a {
   color: white;
-  font-size: 0.9rem;
+
+  font-size: 0.92rem;
   font-weight: 500;
 
-  padding: 0.35rem 0.45rem;
+  padding: 0.45rem 0.7rem;
+
+  border-radius: 6px;
 
   transition:
-    color 0.3s ease,
-    opacity 0.3s ease;
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 nav a:hover {
+  background-color: rgba(255, 255, 255, 0.08);
   color: #d62828;
 }
 
@@ -151,7 +184,7 @@ nav a:hover {
     ),
     url("images/hero.jpeg") center/cover no-repeat;
 
-  min-height: 85vh;
+  min-height: 90vh;
 
   display: flex;
   align-items: center;
@@ -159,22 +192,26 @@ nav a:hover {
 
   text-align: center;
 
-  padding: 6rem 2rem 2rem;
+  padding:
+    8rem
+    1.5rem
+    4rem;
 }
 
 .hero-content {
-  max-width: 750px;
+  max-width: 760px;
   color: white;
 }
 
 .hero-content h2 {
   color: white;
-  font-size: 3rem;
+  font-size: clamp(2.2rem, 6vw, 3.8rem);
   margin-bottom: 1rem;
 }
 
 .hero-content p {
-  font-size: 1.15rem;
+  color: #f0f0f0;
+  font-size: 1.1rem;
   margin-bottom: 2rem;
 }
 
@@ -185,7 +222,9 @@ nav a:hover {
 .btn,
 .service-btn,
 .fs-button {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
   padding: 12px 24px;
 
@@ -195,6 +234,7 @@ nav a:hover {
   border: none;
   border-radius: 8px;
 
+  font-size: 0.95rem;
   font-weight: 600;
 
   cursor: pointer;
@@ -222,16 +262,17 @@ nav a:hover {
     repeat(auto-fit, minmax(280px, 1fr));
 
   gap: 2rem;
-
-  margin-top: 2rem;
 }
 
 .service {
   background: white;
 
-  border-radius: 12px;
+  border-radius: 14px;
 
   overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
 
   box-shadow:
     0 4px 12px rgba(0, 0, 0, 0.08);
@@ -245,12 +286,12 @@ nav a:hover {
   transform: translateY(-5px);
 
   box-shadow:
-    0 10px 25px rgba(0, 0, 0, 0.12);
+    0 10px 24px rgba(0, 0, 0, 0.12);
 }
 
 .service img {
   width: 100%;
-  height: 230px;
+  height: 240px;
   object-fit: cover;
 }
 
@@ -259,53 +300,72 @@ nav a:hover {
 }
 
 .service p {
-  padding: 0 1.25rem 1rem;
-  color: #444;
+  padding: 0 1.25rem 1.25rem;
+  flex-grow: 1;
 }
 
 .service-btn {
-  margin: 0 1.25rem 1.5rem;
+  margin:
+    0
+    1.25rem
+    1.5rem;
 }
 
 /* =========================
    ABOUT SECTION
 ========================= */
 
+#about {
+  text-align: center;
+}
+
 #about img {
   width: 100%;
   max-width: 420px;
   height: auto;
 
-  display: block;
+  margin:
+    0 auto
+    2rem;
 
-  margin: 0 auto 2rem;
-
-  border-radius: 12px;
+  border-radius: 14px;
 
   object-fit: contain;
+
+  box-shadow:
+    0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.about-content {
+  max-width: 850px;
+  margin: 0 auto;
 }
 
 /* =========================
-   CONTACT FORM SECTION
+   CONTACT SECTION
 ========================= */
 
 #contact {
   max-width: 1000px;
 }
 
+/* =========================
+   FORM
+========================= */
+
 form {
   background: white;
 
   padding: 2rem;
 
-  border-radius: 14px;
+  border-radius: 16px;
 
   max-width: 900px;
 
   margin: 0 auto;
 
   box-shadow:
-    0 6px 18px rgba(0, 0, 0, 0.08);
+    0 8px 22px rgba(0, 0, 0, 0.08);
 }
 
 /* =========================
@@ -314,11 +374,8 @@ form {
 
 .fs-layout__2-column {
   display: grid;
-
-  grid-template-columns:
-    repeat(2, minmax(0, 1fr));
-
-  gap: 1.5rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
 }
 
 /* =========================
@@ -326,26 +383,27 @@ form {
 ========================= */
 
 fieldset {
-  border: 1px solid #e8e8e8;
+  border: 1px solid #e5e5e5;
 
-  border-radius: 10px;
+  border-radius: 12px;
 
-  padding: 1.25rem;
+  padding: 1.2rem;
 
   background: #fafafa;
+
+  min-width: 0;
 }
 
 legend {
-  padding: 0 0.4rem;
+  padding: 0 0.35rem;
 
   font-size: 1rem;
-
   font-weight: 600;
 
   color: #111;
 }
 
-/* FULL WIDTH SECTIONS */
+/* FULL WIDTH */
 
 .fs-layout__2-column fieldset:nth-child(4),
 .fs-layout__2-column fieldset:nth-child(5),
@@ -354,72 +412,78 @@ legend {
 }
 
 /* =========================
-   COMPACT FIELD LAYOUTS
+   FIELD GROUPS
 ========================= */
 
 .fs-field {
-  margin-bottom: 1rem;
-}
-
-.fs-field:last-child {
-  margin-bottom: 0;
+  width: 100%;
+  min-width: 0;
 }
 
 .fs-label {
   display: block;
 
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.4rem;
 
   font-size: 0.92rem;
-
   font-weight: 500;
 
   color: #222;
 }
 
-/* ADDRESS GRID */
+/* =========================
+   ADDRESS GRID
+========================= */
 
 fieldset:nth-child(2) {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  column-gap: 1rem;
-  row-gap: 0.75rem;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 1rem;
 }
 
-fieldset:nth-child(2) legend {
-  grid-column: 1 / -1;
-}
-
+fieldset:nth-child(2) legend,
 fieldset:nth-child(2) .fs-field:first-of-type {
   grid-column: 1 / -1;
 }
 
-/* SERVICES GRID */
+/* =========================
+   CONTACT GRID
+========================= */
+
+fieldset:nth-child(3) {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 1rem;
+}
+
+fieldset:nth-child(3) legend {
+  grid-column: 1 / -1;
+}
+
+/* =========================
+   SERVICES GRID
+========================= */
 
 fieldset:nth-child(5) {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  column-gap: 1rem;
-  row-gap: 0.75rem;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 1rem;
 }
 
 fieldset:nth-child(5) legend {
   grid-column: 1 / -1;
 }
 
-fieldset:nth-child(5) .fs-field {
-  min-width: 0;
-}
-
-/* CONTACT GRID */
-
-fieldset:nth-child(3) {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-}
-
-fieldset:nth-child(3) legend {
+fieldset:nth-child(5) .fs-field:last-child {
   grid-column: 1 / -1;
 }
 
@@ -431,20 +495,17 @@ fieldset:nth-child(3) legend {
 .fs-select,
 .fs-textarea {
   width: 100%;
-  max-width: 100%;
   min-width: 0;
 
-  padding: 11px 14px;
+  padding: 12px 14px;
 
   border: 1px solid #ccc;
-
   border-radius: 8px;
 
-  font-size: 0.95rem;
-
-  font-family: inherit;
-
   background: white;
+
+  font-size: 0.95rem;
+  font-family: inherit;
 
   transition:
     border-color 0.3s ease,
@@ -463,8 +524,7 @@ fieldset:nth-child(3) legend {
 }
 
 .fs-textarea {
-  min-height: 130px;
-
+  min-height: 140px;
   resize: vertical;
 }
 
@@ -481,9 +541,8 @@ fieldset:nth-child(3) legend {
 ========================= */
 
 .fs-button-group {
-  margin-top: 1.5rem;
-
   text-align: center;
+  margin-top: 1rem;
 }
 
 /* =========================
@@ -499,11 +558,12 @@ fieldset:nth-child(3) legend {
 
   margin-top: 1.5rem;
 
-  gap: 1rem;
-
   justify-content: center;
+  align-items: center;
 
   flex-wrap: wrap;
+
+  gap: 1rem;
 }
 
 .contact-options.show {
@@ -524,12 +584,12 @@ footer {
 }
 
 footer nav ul {
-  justify-content: center;
   margin-bottom: 1.5rem;
 }
 
 footer p {
   margin-bottom: 1rem;
+  color: #ddd;
 }
 
 footer a {
@@ -541,13 +601,13 @@ footer a:hover {
 }
 
 /* =========================
-   SERVICE PAGE STYLES
+   SERVICE PAGE HEROES
 ========================= */
 
 .service-page-hero,
 .intermediate-service-hero,
 .replacement-service-hero {
-  min-height: 55vh;
+  min-height: 60vh;
 
   display: flex;
   align-items: center;
@@ -595,7 +655,7 @@ footer a:hover {
 .intermediate-service-hero h2,
 .replacement-service-hero h2 {
   color: white;
-  font-size: 3rem;
+  font-size: clamp(2rem, 5vw, 3.5rem);
   margin-bottom: 1rem;
 }
 
@@ -604,9 +664,9 @@ footer a:hover {
 .replacement-service-hero p {
   color: white;
 
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 
-  max-width: 750px;
+  max-width: 760px;
 
   margin: 0 auto;
 }
@@ -618,7 +678,7 @@ footer a:hover {
 .service-page-image {
   width: 100%;
 
-  border-radius: 12px;
+  border-radius: 14px;
 
   margin-bottom: 2rem;
 
@@ -626,18 +686,12 @@ footer a:hover {
     0 6px 20px rgba(0, 0, 0, 0.12);
 }
 
-.service-page-content h2,
-.service-page-content h3 {
-  margin-bottom: 1rem;
-}
-
-.service-page-content p {
-  margin-bottom: 1.25rem;
-  color: #444;
-}
-
 .service-list {
-  margin: 1.5rem 0 2rem 1.5rem;
+  margin:
+    1.5rem
+    0
+    2rem
+    1.5rem;
 }
 
 .service-list li {
@@ -651,7 +705,7 @@ footer a:hover {
 
   background: white;
 
-  border-radius: 12px;
+  border-radius: 14px;
 
   text-align: center;
 
@@ -660,65 +714,27 @@ footer a:hover {
 }
 
 /* =========================
-   TABLET RESPONSIVE
+   TABLET
 ========================= */
 
 @media (max-width: 768px) {
 
-  fieldset:nth-child(2),
-  fieldset:nth-child(3),
-  fieldset:nth-child(5) {
-    grid-template-columns: 1fr;
-  }
-
   header .container {
     flex-direction: column;
-    align-items: center;
-
-    gap: 0.5rem;
-
-    padding: 0.85rem 1rem;
+    gap: 0.75rem;
   }
 
   header h1 {
     text-align: center;
-    font-size: 0.95rem;
     max-width: 100%;
   }
 
-  nav ul {
-    flex-wrap: wrap;
-
-    justify-content: center;
-
-    gap: 0.6rem;
-  }
-
-  nav a {
-    font-size: 0.85rem;
-  }
-
-  .container {
-    width: 92%;
-  }
-
-  h2 {
-    font-size: 1.9rem;
-  }
-
-  .hero-content h2,
-  .service-page-hero h2,
-  .intermediate-service-hero h2,
-  .replacement-service-hero h2 {
-    font-size: 2.2rem;
-  }
-
-  .hero-content p {
-    font-size: 1rem;
+  .hero-content h2 {
+    font-size: 2.5rem;
   }
 
   .service img {
-    height: 200px;
+    height: 210px;
   }
 
   .fs-layout__2-column {
@@ -726,8 +742,13 @@ footer a:hover {
   }
 
   fieldset:nth-child(2),
+  fieldset:nth-child(3),
   fieldset:nth-child(5) {
     grid-template-columns: 1fr;
+  }
+
+  fieldset:nth-child(5) .fs-field:last-child {
+    grid-column: auto;
   }
 
   form {
@@ -740,13 +761,13 @@ footer a:hover {
 }
 
 /* =========================
-   MOBILE RESPONSIVE
+   MOBILE
 ========================= */
 
 @media (max-width: 480px) {
 
-  header h1 {
-    font-size: 0.9rem;
+  .container {
+    width: 94%;
   }
 
   nav ul {
@@ -755,22 +776,28 @@ footer a:hover {
 
   nav a {
     font-size: 0.82rem;
+    padding: 0.35rem 0.5rem;
   }
 
   .hero-content h2 {
-    font-size: 1.8rem;
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
   }
 
   .btn,
   .service-btn,
   .fs-button {
     width: 100%;
-    text-align: center;
   }
 
   form {
-    padding: 1.1rem;
+    padding: 1rem;
+  }
+
+  .service img {
+    height: 190px;
   }
 }
-```
-
