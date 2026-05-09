@@ -472,3 +472,101 @@ img {
     gap: 0.75rem;
   }
 }
+/* =========================
+   SERVICE PAGE
+========================= */
+
+.service-page-hero {
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.55)
+    ),
+    url("images/basic-repair.jpeg")
+    center/cover no-repeat;
+
+  min-height: 55vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.hero-overlay {
+  width: 100%;
+  padding: 4rem 1rem;
+}
+
+.service-page-hero h2 {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.service-page-hero p {
+  color: white;
+  font-size: 1.2rem;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.service-page-content {
+  max-width: 900px;
+}
+
+.service-page-image {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow:
+    0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.service-page-content h2,
+.service-page-content h3 {
+  margin-bottom: 1rem;
+}
+
+.service-page-content p {
+  margin-bottom: 1.25rem;
+  color: #444;
+}
+
+.service-list {
+  margin: 1.5rem 0 2rem 1.5rem;
+}
+
+.service-list li {
+  margin-bottom: 0.75rem;
+}
+
+.service-cta {
+  margin-top: 3rem;
+  padding: 2rem;
+
+  background: white;
+
+  border-radius: 12px;
+
+  text-align: center;
+
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .service-page-hero h2 {
+    font-size: 2.2rem;
+  }
+
+  .service-page-hero p {
+    font-size: 1rem;
+  }
+}
