@@ -1,37 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta
-    name="description"
-    content="Meraz Roofing LLC provides roof repair, roof replacement, gutter installation, siding, and new construction roofing services in Jacksonville, Wilmington, Hampstead, Richlands, and New Bern, NC."
-  >
-
-  <meta property="og:title" content="Meraz Roofing LLC">
-  <meta property="og:description" content="Professional roofing services in Jacksonville, Wilmington, Hampstead, Richlands, and New Bern, NC.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="images/hero.webp">
-
-  <link rel="icon" href="images/favicon/favicon.ico">
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet"
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
   >
 
   <title>
     Meraz Roofing LLC | Roof Repair & Replacement Services
   </title>
 
-  <link rel="stylesheet" href="styles.css">
+  <!-- SEO -->
+  <meta
+    name="description"
+    content="Meraz Roofing LLC provides roof repair, roof replacement, gutter installation, siding, and new construction roofing services in Jacksonville, Wilmington, Hampstead, Richlands, New Bern, and surrounding North Carolina areas."
+  >
 
-  <link rel="canonical" href="https://merazroofing.com/">
+  <meta
+    name="keywords"
+    content="roofing contractor Jacksonville NC, roof repair Wilmington NC, roof replacement Hampstead NC, Meraz Roofing LLC"
+  >
+
+  <meta name="author" content="Meraz Roofing LLC">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Meraz Roofing LLC">
+
+  <meta
+    property="og:description"
+    content="Professional roofing services in Jacksonville, Wilmington, Hampstead, Richlands, and New Bern, NC."
+  >
+
+  <meta property="og:type" content="website">
+
+  <meta
+    property="og:image"
+    content="https://merazroofing.com/images/hero.webp"
+  >
+
+  <meta
+    property="og:url"
+    content="https://merazroofing.com/"
+  >
+
+  <!-- Canonical -->
+  <link
+    rel="canonical"
+    href="https://merazroofing.com/"
+  >
+
+  <!-- Favicon -->
+  <link
+    rel="icon"
+    href="images/favicon/favicon.ico"
+    type="image/x-icon"
+  >
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
 
   <!-- STRUCTURED DATA -->
   <script type="application/ld+json">
@@ -39,6 +82,7 @@
     "@context": "https://schema.org",
     "@type": "RoofingContractor",
     "name": "Meraz Roofing LLC",
+    "url": "https://merazroofing.com",
     "telephone": "+1-910-380-8027",
     "email": "info@merazroofing.com",
     "areaServed": [
@@ -49,7 +93,7 @@
       "New Bern NC",
       "Mount Olive NC"
     ],
-    "url": "https://merazroofing.com"
+    "image": "https://merazroofing.com/images/hero.webp"
   }
   </script>
 
@@ -58,23 +102,52 @@
 <body>
 
   <!-- HEADER -->
-  <header>
+  <header id="site-header">
+
     <div class="container">
 
-      <h1>
-        Roofing Services in Jacksonville, NC | Meraz Roofing LLC
-      </h1>
+      <a href="#hero" class="logo-link">
+
+        <h1>
+          Meraz Roofing LLC
+        </h1>
+
+      </a>
 
       <nav aria-label="Main navigation">
+
         <ul>
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+
+          <li>
+            <a href="#hero">
+              Home
+            </a>
+          </li>
+
+          <li>
+            <a href="#services">
+              Services
+            </a>
+          </li>
+
+          <li>
+            <a href="#about">
+              About
+            </a>
+          </li>
+
+          <li>
+            <a href="#contact">
+              Contact
+            </a>
+          </li>
+
         </ul>
+
       </nav>
 
     </div>
+
   </header>
 
   <!-- MAIN -->
@@ -84,15 +157,19 @@
     <section id="hero">
 
       <div class="hero-content">
-        <h2>Reliable Roofing You Can Trust</h2>
+
+        <h2>
+          Reliable Roofing You Can Trust
+        </h2>
 
         <p>
-          Protecting your home with quality craftsmanship.
+          Protecting your home with quality craftsmanship and dependable service across Eastern North Carolina.
         </p>
 
         <a href="#contact" class="btn">
           Get a Free Quote
         </a>
+
       </div>
 
     </section>
@@ -100,30 +177,44 @@
     <!-- SERVICES -->
     <section id="services" class="container">
 
-      <h2>Our Services</h2>
+      <h2>
+        Our Services
+      </h2>
 
       <div class="services">
 
-        <!-- BASIC REPAIR -->
+        <!-- BASIC -->
         <article class="service">
 
           <picture>
-            <source srcset="images/basic-repair.webp" type="image/webp">
+
+            <source
+              srcset="images/basic-repair.webp"
+              type="image/webp"
+            >
 
             <img
               src="images/basic-repair.jpeg"
-              alt="Basic Roofing Repair"
+              alt="Basic Roofing Repair Service"
               loading="lazy"
+              width="600"
+              height="400"
             >
+
           </picture>
 
-          <h3>Basic Roofing Repair</h3>
+          <h3>
+            Basic Roofing Repair
+          </h3>
 
           <p>
-            Our Basic Roofing Repair is designed for quick fixes that maintain integrity without breaking the bank. Experience quality and reliability in every shingle we install.
+            Fast and reliable roof repairs designed to protect your home and extend the life of your roofing system.
           </p>
 
-          <a href="basic-roofing-repair.html" class="service-btn">
+          <a
+            href="basic-roofing-repair.html"
+            class="service-btn"
+          >
             Learn More
           </a>
 
@@ -133,22 +224,34 @@
         <article class="service">
 
           <picture>
-            <source srcset="images/intermediate-solutions.webp" type="image/webp">
+
+            <source
+              srcset="images/intermediate-solutions.webp"
+              type="image/webp"
+            >
 
             <img
               src="images/intermediate-solutions.jpeg"
               alt="Intermediate Roofing Solutions"
               loading="lazy"
+              width="600"
+              height="400"
             >
+
           </picture>
 
-          <h3>Intermediate Roofing Solutions</h3>
+          <h3>
+            Intermediate Roofing Solutions
+          </h3>
 
           <p>
-            Our Intermediate Roofing Solutions provide enhanced durability, ensuring your roof withstands the elements. Trust us to elevate your roofing experience with professional care.
+            Durable roofing upgrades and solutions that improve protection, efficiency, and long-term performance.
           </p>
 
-          <a href="intermediate-roofing-solutions.html" class="service-btn">
+          <a
+            href="intermediate-roofing-solutions.html"
+            class="service-btn"
+          >
             Learn More
           </a>
 
@@ -158,22 +261,34 @@
         <article class="service">
 
           <picture>
-            <source srcset="images/roof-replacement.webp" type="image/webp">
+
+            <source
+              srcset="images/roof-replacement.webp"
+              type="image/webp"
+            >
 
             <img
               src="images/roof-replacement.jpeg"
-              alt="Advanced Roof Replacement"
+              alt="Advanced Roof Replacement Service"
               loading="lazy"
+              width="600"
+              height="400"
             >
+
           </picture>
 
-          <h3>Advanced Complete Roof Replacement</h3>
+          <h3>
+            Advanced Complete Roof Replacement
+          </h3>
 
           <p>
-            Opt for our Advanced Complete Roof Replacement service, where we utilize the latest materials adhering to current standards, leaving your home safe and stylish for years to come.
+            Full roof replacement services using high-quality materials built to meet modern industry standards.
           </p>
 
-          <a href="advanced-roof-replacement.html" class="service-btn">
+          <a
+            href="advanced-roof-replacement.html"
+            class="service-btn"
+          >
             Learn More
           </a>
 
@@ -186,66 +301,71 @@
     <!-- ABOUT -->
     <section id="about" class="container">
 
-      <h2>About Us</h2>
+      <h2>
+        About Us
+      </h2>
 
       <picture>
-        <source srcset="images/about.webp" type="image/webp">
+
+        <source
+          srcset="images/about.webp"
+          type="image/webp"
+        >
 
         <img
           src="images/about.jpg"
-          alt="About Meraz Roofing"
+          alt="Meraz Roofing LLC team"
           loading="lazy"
+          width="700"
+          height="500"
         >
+
       </picture>
 
-      <p>
-        Meraz Roofing LLC is committed to delivering high-quality roofing services with integrity, professionalism, and attention to detail. Your satisfaction is our top priority.
-      </p>
+      <div class="about-content">
 
-      <p>
-        At Meraz Roofing, we pride ourselves on being your trusted local roofing experts dedicated to serving the Jacksonville, Hampstead, Wilmington, Richlands, and New Bern communities.
-      </p>
+        <p>
+          Meraz Roofing LLC is committed to delivering high-quality roofing services with integrity, professionalism, and attention to detail.
+        </p>
 
-      <p>
-        Our legacy is built on delivering exceptional roofing solutions, whether through reliable repairs or complete roof replacements using top-quality materials that meet current industry standards.
-      </p>
+        <p>
+          We proudly serve homeowners throughout Jacksonville, Hampstead, Wilmington, Richlands, New Bern, and surrounding North Carolina communities.
+        </p>
 
-      <p>
-        We understand that a roof is more than just a covering; it’s a crucial component of your home’s protection and value.
-      </p>
+        <p>
+          Whether you need roof repairs, roofing upgrades, or a complete replacement, our experienced team is dedicated to protecting your home with dependable workmanship and premium materials.
+        </p>
 
-      <p>
-        Our team is comprised of skilled professionals who are passionate about providing personalized service and ensuring your complete satisfaction.
-      </p>
-
-      <p>
-        Choose Meraz Roofing LLC for a roofing experience that honors your unique needs and stands the test of time.
-      </p>
+      </div>
 
     </section>
 
     <!-- CONTACT -->
     <section id="contact" class="container">
 
-      <h2>Contact Us</h2>
+      <h2>
+        Contact Us
+      </h2>
 
       <form
         action="https://formspree.io/f/xjgjnzyy"
-        class="fs-form fs-layout__2-column"
-        target="_top"
         method="POST"
+        class="fs-form fs-layout__2-column"
       >
 
         <!-- PERSONAL -->
         <fieldset>
 
-          <legend class="fs-fieldset-title">
+          <legend>
             Personal Details
           </legend>
 
           <div class="fs-field">
 
-            <label class="fs-label" for="name">
+            <label
+              class="fs-label"
+              for="name"
+            >
               Full Name
             </label>
 
@@ -265,14 +385,17 @@
         <!-- ADDRESS -->
         <fieldset>
 
-          <legend class="fs-fieldset-title">
+          <legend>
             Address Details
           </legend>
 
           <div class="fs-field">
 
-            <label class="fs-label" for="address-1">
-              Address Line 1
+            <label
+              class="fs-label"
+              for="address-1"
+            >
+              Address
             </label>
 
             <input
@@ -287,7 +410,10 @@
 
           <div class="fs-field">
 
-            <label class="fs-label" for="city">
+            <label
+              class="fs-label"
+              for="city"
+            >
               City
             </label>
 
@@ -303,8 +429,11 @@
 
           <div class="fs-field">
 
-            <label class="fs-label" for="state">
-              State / Province
+            <label
+              class="fs-label"
+              for="state"
+            >
+              State
             </label>
 
             <input
@@ -319,8 +448,11 @@
 
           <div class="fs-field">
 
-            <label class="fs-label" for="zip-code">
-              Postal / Zip Code
+            <label
+              class="fs-label"
+              for="zip-code"
+            >
+              Zip Code
             </label>
 
             <input
@@ -335,16 +467,19 @@
 
         </fieldset>
 
-        <!-- CONTACT INFO -->
+        <!-- CONTACT -->
         <fieldset>
 
-          <legend class="fs-fieldset-title">
+          <legend>
             Contact Information
           </legend>
 
           <div class="fs-field">
 
-            <label class="fs-label" for="email">
+            <label
+              class="fs-label"
+              for="email"
+            >
               Email
             </label>
 
@@ -361,16 +496,19 @@
 
           <div class="fs-field">
 
-            <label class="fs-label" for="number">
-              Contact Number
+            <label
+              class="fs-label"
+              for="phone"
+            >
+              Phone Number
             </label>
 
             <input
               class="fs-input"
               type="tel"
-              id="number"
-              name="number"
-              placeholder="(000) 000-0000"
+              id="phone"
+              name="phone"
+              placeholder="(910) 555-5555"
               autocomplete="tel"
               required
             >
@@ -382,13 +520,16 @@
         <!-- MESSAGE -->
         <fieldset>
 
-          <legend class="fs-fieldset-title">
-            Description
+          <legend>
+            Project Details
           </legend>
 
           <div class="fs-field">
 
-            <label class="fs-label" for="message">
+            <label
+              class="fs-label"
+              for="message"
+            >
               Message
             </label>
 
@@ -396,13 +537,9 @@
               class="fs-textarea"
               id="message"
               name="message"
-              placeholder="Describe your issue here..."
+              placeholder="Describe your roofing needs..."
               required
             ></textarea>
-
-            <p class="fs-description">
-              Please describe your request
-            </p>
 
           </div>
 
@@ -411,14 +548,17 @@
         <!-- SERVICES -->
         <fieldset>
 
-          <legend class="fs-fieldset-title">
-            Services
+          <legend>
+            Requested Services
           </legend>
 
           <div class="fs-field">
 
-            <label class="fs-label" for="service-request">
-              Services Requested
+            <label
+              class="fs-label"
+              for="service-request"
+            >
+              Service Type
             </label>
 
             <select
@@ -449,8 +589,11 @@
 
           <div class="fs-field">
 
-            <label class="fs-label" for="start-date">
-              When do you plan to start?
+            <label
+              class="fs-label"
+              for="start-date"
+            >
+              Preferred Start Date
             </label>
 
             <input
@@ -458,15 +601,17 @@
               type="date"
               id="start-date"
               name="start-date"
-              required
             >
 
           </div>
 
           <div class="fs-field">
 
-            <label class="fs-label" for="learn">
-              How did you learn about us?
+            <label
+              class="fs-label"
+              for="learn"
+            >
+              How Did You Hear About Us?
             </label>
 
             <select
@@ -475,20 +620,20 @@
               name="learn"
             >
 
-              <option value="search-engines">
-                Search Engines (Google, DuckDuckGo, etc)
+              <option value="google">
+                Google/Search Engine
               </option>
 
               <option value="social-media">
                 Social Media
               </option>
 
-              <option value="company-website">
+              <option value="website">
                 Company Website
               </option>
 
-              <option value="referred-to-us">
-                Referred to us — tell us in the comments
+              <option value="referral">
+                Referral
               </option>
 
             </select>
@@ -503,9 +648,8 @@
           <button
             class="fs-button"
             type="submit"
-            aria-label="Submit contact form"
           >
-            Submit
+            Submit Request
           </button>
 
         </div>
@@ -517,19 +661,31 @@
     <!-- CONTACT CTA -->
     <section class="contact-cta container">
 
-      <h3>Need Roofing Help?</h3>
+      <h3>
+        Need Roofing Help?
+      </h3>
 
       <p>
         Call or text us today for a free estimate.
       </p>
 
-      <button class="btn" onclick="toggleContactOptions()">
+      <button
+        class="btn"
+        type="button"
+        onclick="toggleContactOptions()"
+      >
         Call or Text Us
       </button>
 
-      <div id="contactOptions" class="contact-options">
+      <div
+        id="contactOptions"
+        class="contact-options"
+      >
 
-        <a href="tel:+19103808027" class="btn">
+        <a
+          href="tel:+19103808027"
+          class="btn"
+        >
           Call (910) 380-8027
         </a>
 
@@ -552,10 +708,31 @@
     <nav aria-label="Footer navigation">
 
       <ul>
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+
+        <li>
+          <a href="#hero">
+            Home
+          </a>
+        </li>
+
+        <li>
+          <a href="#services">
+            Services
+          </a>
+        </li>
+
+        <li>
+          <a href="#about">
+            About
+          </a>
+        </li>
+
+        <li>
+          <a href="#contact">
+            Contact
+          </a>
+        </li>
+
       </ul>
 
     </nav>
@@ -569,15 +746,19 @@
     </p>
 
     <p>
+
       <a href="tel:+19103808027">
         (910) 380-8027
       </a>
+
     </p>
 
     <p>
+
       <a href="mailto:info@merazroofing.com">
-        Email Us
+        info@merazroofing.com
       </a>
+
     </p>
 
   </footer>
@@ -589,23 +770,40 @@
       options.classList.toggle("show");
     }
   </script>
-  
-<script>
-  let lastScrollTop = 0;
-  const header = document.querySelector("header");
 
-  window.addEventListener("scroll", function () {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  <!-- HIDE HEADER ON SCROLL -->
+  <script>
 
-    if (scrollTop > lastScrollTop && scrollTop > 100) {
-      header.classList.add("hide-header");
-    } else {
-      header.classList.remove("hide-header");
-    }
+    let lastScrollTop = 0;
 
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-  });
-</script>
+    const header =
+      document.getElementById("site-header");
+
+    window.addEventListener("scroll", function () {
+
+      let scrollTop =
+        window.pageYOffset ||
+        document.documentElement.scrollTop;
+
+      if (
+        scrollTop > lastScrollTop &&
+        scrollTop > 120
+      ) {
+
+        header.classList.add("hide-header");
+
+      } else {
+
+        header.classList.remove("hide-header");
+
+      }
+
+      lastScrollTop =
+        scrollTop <= 0 ? 0 : scrollTop;
+
+    });
+
+  </script>
 
 </body>
 </html>
