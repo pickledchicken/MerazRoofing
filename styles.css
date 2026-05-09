@@ -570,3 +570,52 @@ img {
     font-size: 1rem;
   }
 }
+/* =========================
+   INTERMEDIATE SERVICE PAGE
+========================= */
+
+.intermediate-service-hero {
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.55)
+    ),
+    url("images/intermediate-solutions.jpeg")
+    center/cover no-repeat;
+
+  min-height: 55vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.intermediate-service-hero h2 {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.intermediate-service-hero p {
+  color: white;
+  font-size: 1.2rem;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  .intermediate-service-hero h2 {
+    font-size: 2.2rem;
+  }
+
+  .intermediate-service-hero p {
+    font-size: 1rem;
+  }
+}
