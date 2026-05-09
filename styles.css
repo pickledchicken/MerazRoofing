@@ -1,3 +1,4 @@
+```css
 /* =========================
    GLOBAL STYLES
 ========================= */
@@ -74,14 +75,24 @@ a {
 ========================= */
 
 header {
-  background-color: #111;
+  background-color: rgba(17, 17, 17, 0.96);
   color: white;
 
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 1000;
+  left: 0;
 
   width: 100%;
+
+  z-index: 1000;
+
+  transition:
+    transform 0.35s ease,
+    background-color 0.3s ease;
+}
+
+header.hide-header {
+  transform: translateY(-100%);
 }
 
 header .container {
@@ -89,14 +100,14 @@ header .container {
   justify-content: space-between;
   align-items: center;
 
-  padding: 1rem 5%;
+  padding: 0.9rem 5%;
 }
 
 header h1 {
   color: white;
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.4;
-  max-width: 450px;
+  max-width: 420px;
 }
 
 /* =========================
@@ -107,21 +118,21 @@ nav ul {
   display: flex;
   align-items: center;
 
-  gap: 1.25rem;
+  gap: 1rem;
 
-  list-style: none;
-}
-
-nav ul li {
   list-style: none;
 }
 
 nav a {
   color: white;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 500;
 
-  transition: color 0.3s ease;
+  padding: 0.35rem 0.45rem;
+
+  transition:
+    color 0.3s ease,
+    opacity 0.3s ease;
 }
 
 nav a:hover {
@@ -147,7 +158,8 @@ nav a:hover {
   justify-content: center;
 
   text-align: center;
-  padding: 2rem;
+
+  padding: 6rem 2rem 2rem;
 }
 
 .hero-content {
@@ -162,7 +174,7 @@ nav a:hover {
 }
 
 .hero-content p {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   margin-bottom: 2rem;
 }
 
@@ -170,15 +182,18 @@ nav a:hover {
    BUTTONS
 ========================= */
 
-.btn {
+.btn,
+.service-btn,
+.fs-button {
   display: inline-block;
-  padding: 14px 28px;
+
+  padding: 12px 24px;
 
   background-color: #b22222;
   color: white;
 
-  border-radius: 6px;
   border: none;
+  border-radius: 8px;
 
   font-weight: 600;
 
@@ -189,7 +204,9 @@ nav a:hover {
     transform 0.2s ease;
 }
 
-.btn:hover {
+.btn:hover,
+.service-btn:hover,
+.fs-button:hover {
   background-color: #8b1a1a;
   transform: translateY(-2px);
 }
@@ -247,27 +264,7 @@ nav a:hover {
 }
 
 .service-btn {
-  display: inline-block;
-
   margin: 0 1.25rem 1.5rem;
-
-  padding: 12px 24px;
-
-  background-color: #b22222;
-  color: white;
-
-  border-radius: 6px;
-
-  font-weight: 600;
-
-  transition:
-    background-color 0.3s ease,
-    transform 0.2s ease;
-}
-
-.service-btn:hover {
-  background-color: #8b1a1a;
-  transform: translateY(-2px);
 }
 
 /* =========================
@@ -289,21 +286,31 @@ nav a:hover {
 }
 
 /* =========================
-   CONTACT FORM
+   CONTACT FORM SECTION
 ========================= */
+
+#contact {
+  max-width: 1000px;
+}
 
 form {
   background: white;
 
-  padding: 2.5rem;
+  padding: 2rem;
 
   border-radius: 14px;
+
+  max-width: 900px;
+
+  margin: 0 auto;
 
   box-shadow:
     0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
-/* FORM GRID LAYOUT */
+/* =========================
+   FORM GRID
+========================= */
 
 .fs-layout__2-column {
   display: grid;
@@ -311,27 +318,27 @@ form {
   grid-template-columns:
     repeat(2, minmax(0, 1fr));
 
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
-/* FIELDSETS */
+/* =========================
+   FIELDSETS
+========================= */
 
 fieldset {
-  border: 1px solid #e5e5e5;
+  border: 1px solid #e8e8e8;
 
   border-radius: 10px;
 
-  padding: 1.5rem;
+  padding: 1.25rem;
 
   background: #fafafa;
-
-  min-height: 100%;
 }
 
 legend {
-  padding: 0 0.5rem;
+  padding: 0 0.4rem;
 
-  font-size: 1.1rem;
+  font-size: 1rem;
 
   font-weight: 600;
 
@@ -346,13 +353,12 @@ legend {
   grid-column: 1 / -1;
 }
 
-/* FORM FIELDS */
+/* =========================
+   COMPACT FIELD LAYOUTS
+========================= */
 
 .fs-field {
-  display: flex;
-  flex-direction: column;
-
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
 }
 
 .fs-field:last-child {
@@ -360,27 +366,61 @@ legend {
 }
 
 .fs-label {
-  margin-bottom: 0.5rem;
+  display: block;
+
+  margin-bottom: 0.35rem;
+
+  font-size: 0.92rem;
 
   font-weight: 500;
 
   color: #222;
 }
 
-/* INPUTS */
+/* ADDRESS GRID */
+
+fieldset:nth-child(2) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+fieldset:nth-child(2) legend {
+  grid-column: 1 / -1;
+}
+
+fieldset:nth-child(2) .fs-field:first-of-type {
+  grid-column: 1 / -1;
+}
+
+/* SERVICES GRID */
+
+fieldset:nth-child(5) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+fieldset:nth-child(5) legend {
+  grid-column: 1 / -1;
+}
+
+/* =========================
+   INPUTS
+========================= */
 
 .fs-input,
 .fs-select,
 .fs-textarea {
   width: 100%;
 
-  padding: 14px 16px;
+  padding: 11px 14px;
 
   border: 1px solid #ccc;
 
   border-radius: 8px;
 
-  font-size: 1rem;
+  font-size: 0.95rem;
 
   font-family: inherit;
 
@@ -403,7 +443,7 @@ legend {
 }
 
 .fs-textarea {
-  min-height: 160px;
+  min-height: 130px;
 
   resize: vertical;
 }
@@ -411,45 +451,19 @@ legend {
 .fs-description {
   margin-top: 0.5rem;
 
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 
   color: #666;
 }
 
-/* BUTTON */
+/* =========================
+   BUTTON GROUP
+========================= */
 
 .fs-button-group {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 
   text-align: center;
-}
-
-.fs-button {
-  background-color: #b22222;
-
-  color: white;
-
-  border: none;
-
-  padding: 14px 32px;
-
-  border-radius: 8px;
-
-  cursor: pointer;
-
-  font-size: 1rem;
-
-  font-weight: 600;
-
-  transition:
-    background-color 0.3s ease,
-    transform 0.2s ease;
-}
-
-.fs-button:hover {
-  background-color: #8b1a1a;
-
-  transform: translateY(-2px);
 }
 
 /* =========================
@@ -500,20 +514,10 @@ footer p {
 
 footer a {
   color: white;
-  transition: color 0.3s ease;
 }
 
 footer a:hover {
   color: #d62828;
-}
-
-/* =========================
-   IMAGES
-========================= */
-
-img {
-  max-width: 100%;
-  display: block;
 }
 
 /* =========================
@@ -645,14 +649,14 @@ img {
     flex-direction: column;
     align-items: center;
 
-    gap: 0.75rem;
+    gap: 0.5rem;
 
-    padding: 1rem;
+    padding: 0.85rem 1rem;
   }
 
   header h1 {
     text-align: center;
-    font-size: 1rem;
+    font-size: 0.95rem;
     max-width: 100%;
   }
 
@@ -661,11 +665,11 @@ img {
 
     justify-content: center;
 
-    gap: 0.75rem;
+    gap: 0.6rem;
   }
 
   nav a {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
 
   .container {
@@ -683,10 +687,7 @@ img {
     font-size: 2.2rem;
   }
 
-  .hero-content p,
-  .service-page-hero p,
-  .intermediate-service-hero p,
-  .replacement-service-hero p {
+  .hero-content p {
     font-size: 1rem;
   }
 
@@ -698,9 +699,9 @@ img {
     grid-template-columns: 1fr;
   }
 
-  .fs-layout__2-column fieldset,
-  .fs-button-group {
-    grid-column: auto;
+  fieldset:nth-child(2),
+  fieldset:nth-child(5) {
+    grid-template-columns: 1fr;
   }
 
   form {
@@ -708,7 +709,7 @@ img {
   }
 
   fieldset {
-    padding: 1.25rem;
+    padding: 1rem;
   }
 }
 
@@ -719,15 +720,15 @@ img {
 @media (max-width: 480px) {
 
   header h1 {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 
   nav ul {
-    gap: 0.5rem;
+    gap: 0.45rem;
   }
 
   nav a {
-    font-size: 0.85rem;
+    font-size: 0.82rem;
   }
 
   .hero-content h2 {
@@ -742,14 +743,7 @@ img {
   }
 
   form {
-    padding: 1.25rem;
-  }
-
-  fieldset {
-    padding: 1rem;
-  }
-
-  .fs-button {
-    width: 100%;
+    padding: 1.1rem;
   }
 }
+```
