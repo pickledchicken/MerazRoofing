@@ -528,14 +528,6 @@ fieldset:nth-child(5) .fs-field:last-child {
   resize: vertical;
 }
 
-.fs-description {
-  margin-top: 0.5rem;
-
-  font-size: 0.85rem;
-
-  color: #666;
-}
-
 /* =========================
    BUTTON GROUP
 ========================= */
@@ -675,12 +667,21 @@ footer a:hover {
   max-width: 900px;
 }
 
+/* UPDATED MAIN SERVICE PAGE IMAGE */
+
 .service-page-image {
   width: 100%;
+  max-width: 550px;
+
+  height: auto;
+
+  display: block;
+
+  margin: 0 auto 2rem;
 
   border-radius: 14px;
 
-  margin-bottom: 2rem;
+  object-fit: cover;
 
   box-shadow:
     0 6px 20px rgba(0, 0, 0, 0.12);
@@ -757,6 +758,10 @@ footer a:hover {
 
   fieldset {
     padding: 1rem;
+  }
+
+  .service-page-image {
+    max-width: 100%;
   }
 }
 
